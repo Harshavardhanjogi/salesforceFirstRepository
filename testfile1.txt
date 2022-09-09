@@ -3,3 +3,7 @@ E
 F
 G
 hi
+New line 6 git status
+line 78
+line 8 added by others
+git fetch
