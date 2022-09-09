@@ -4,3 +4,4 @@ F
 G
 hi
 New line 6 git status
+line 7
