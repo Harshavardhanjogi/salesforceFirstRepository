@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    Here we call all component
+    <aura:attribute name="EmployeeName" type="String" default="John" />
+    <aura:attribute name="EmployeeLName" type="String" default="Gowda" />
+	...The name of Employee is = {! v.EmployeeName } {! v.EmployeeLName }
+</aura:component>

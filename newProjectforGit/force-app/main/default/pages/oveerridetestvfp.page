@@ -1,0 +1,13 @@
+<apex:page standardcontroller="Account" extensions="classone,classtwo" >
+    <apex:form >  
+            <apex:pageblock title="pagesection">
+                <apex:pageblockbuttons >
+                        <apex:commandButton value="click me" Action="{!myfunction}"/>         
+                    </apex:pageblockbuttons>
+                 <apex:pageblocksection >
+                    
+                  </apex:pageblocksection>
+            </apex:pageblock>
+        
+     </apex:form>
+</apex:page>

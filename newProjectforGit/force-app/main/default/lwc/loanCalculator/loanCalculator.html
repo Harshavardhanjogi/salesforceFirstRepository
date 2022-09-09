@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="Loan calculator" >
+        <p>Hello. enter your inputs</p>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="number" label="Enter Principal" placeholder="Principal" onchange={principalvalueHandler}></lightning-input>
+            <lightning-input type="number" label="Enter Years" placeholder="years" onchange={yearsvalueHandler}></lightning-input>
+            <lightning-input type="number" label="Enter ROI" placeholder="interest rate" onchange={roivalueHandler}></lightning-input>
+            <br />
+            <lightning-button variant="brand" label="Calculate interest" title="Primary action" onclick={calculateLoan} class="slds-m-left_x-small"></lightning-button>
+            <br /><br />
+              <lightning-formatted-text value={loanresult}></lightning-formatted-text>
+            
+        </div>
+    </lightning-card>
+</template>

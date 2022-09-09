@@ -1,0 +1,26 @@
+<aura:component controller="HDFCCreateClientRecord" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="AttrClient" type="HDFC_customer__c"
+                    default="{'sObjectType': 'HDFC_customer__c',
+                             'First_Name__c':'',
+                             'Email__c':'',
+                             'country__c':'',
+                             'Salary__c':''
+                             }" />
+    <h1>HDFC customer form</h1>
+    <h2>Please enter all the customer details</h2>
+    <div>
+        First name:<ui:inputText value="{!v.AttrClient.First_Name__c}" />
+    </div>
+    <div>
+        Email:<ui:inputText value="{!v.AttrClient.Email__c}" />
+    </div>
+    <div>
+        Country:<ui:inputText value="{!v.AttrClient.country__c}" />
+    </div>
+    <div>
+        Salary:<ui:inputText value="{!v.AttrClient.Salary__c}" />
+    </div>
+    <div>
+        <ui:button label="Submit" press="{!c.createHDFC}" />
+    </div>
+</aura:component>

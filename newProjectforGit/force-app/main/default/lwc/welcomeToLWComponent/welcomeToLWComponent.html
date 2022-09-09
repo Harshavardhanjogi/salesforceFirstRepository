@@ -1,0 +1,47 @@
+<template>
+    Welcome to the world of LWC 2
+    <lightning-card  title="data from html to JS" >
+        <lightning-button label="New" slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">Card Body (test)</p>
+
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Enter some text" placeholder="type here..." onchange={handleClick}></lightning-input>
+
+    </div>
+    <p slot="footer">Card Footer</p>
+    <br /><br />
+
+
+    <lightning-card  title="data from JS to HTML" >
+        <p>Hello, {firstname}</p>
+        <lightning-button variant="brand" label="change" title="Primary action" onclick={changename} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+    <br /><br />
+
+     
+    <lightning-card  title="True or false" >
+        <template if:true={showDealStatus}>
+            True data
+        </template>
+        <template if:false={showDealStatus}>
+            false data
+        </template>
+
+    </lightning-card>
+
+    <lightning-card  title="Interval.." >
+        Timer<br />
+        <p>stopwatch running : {callinterval}</p>
+        <lightning-button variant="brand" label="Start" title="Primary action" onclick={startTimer} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="stop" title="Primary action" onclick={stopTimer} class="slds-m-left_x-small"></lightning-button>
+    
+     </lightning-card>
+
+     <lightning-card  title="Load image from static resource.." >
+        Image<br />
+        <img src={imageprop}>
+    
+     </lightning-card>
+     
+</lightning-card>
+</template>

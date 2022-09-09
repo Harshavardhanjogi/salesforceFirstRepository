@@ -1,0 +1,11 @@
+<template>
+    Welcome to the world of LWC : for eachLoop
+    <lightning-card  title="data from JS to HTML" >
+        <template for:each={CEOList} for:item="cd">
+            <li key={cd.id}>
+                Ranking : {cd.id} | CEO Name : {cd.name}, {cd.title}
+            </li>
+        </template>
+        <lightning-button variant="brand" label="Show CEO's" title="Primary action" onclick={showlist} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="data from Apex class Method 1one1" >
+        <template if:true={acclist.data}>
+            <template for:each={acclist.data} for:item="cd">
+                <p key={cd.id}>
+                    name : {cd.Name} |
+                </p>
+            </template>
+        </template>
+
+        <template if:true={acclist.error}>
+            {acclist.error}
+        </template>
+    </lightning-card>
+</template>
