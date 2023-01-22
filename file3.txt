@@ -1,0 +1,7 @@
+ @future
+    public static void deleteBadRecords(List<String> recordsToDelete){
+        System.debug('recordsToDelete future:'+recordsToDelete);
+        List<Index_Name_Change_log__c> todelete = [SELECT Id FROM Index_Name_Change_log__c WHERE Index_SPID__c IN :recordsToDelete];
+        System.debug('todelete future:'+todelete);
+        delete todelete;
+    }
