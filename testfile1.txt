@@ -10,9 +10,11 @@ public class Test{
             //here we are doing few things
         }
         if(some cond){
-            //do few things
         }else{
             //do few things 
+        }
+        if(new if cond){
+            System.debug('sss:'+sss);
         }
         if(some cond){
             
