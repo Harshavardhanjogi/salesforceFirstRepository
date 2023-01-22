@@ -1,4 +1,26 @@
 public class Test{
+    public static void mainmainfirst(){
+        // completely new code
+        SPFGWrapper spFG = new SPFGWrapper();
+        spFG.id = fgm.Study_Participant__c;
+        spFG.loadKey = fgm.Family_Group__c; // Use this as a common key between FG and task grid load
+        spFG.fgName = fgm.Family_Group__r.Name;
+        spFG.FamilyGroupURL = '/'+fgm.Family_Group__c;
+        spFG.SPId = fgm.Study_Participant__r.PRMS_Id__c;
+        spFG.SPIDURL = '/'+ fgm.Study_Participant__c;
+        spFG.RecruitmentStatus = fgm.Study_Participant__r.Recruitment_Status__c;
+        spFG.CallAttemptNotes = fgm.Study_Participant__r.Call_Attempt_Notes__c;
+        if(twinFGMap.get(fgm.Study_Participant__c).size()>1){
+        spFG.twinFG = String.join(twinFGMap.get(fgm.Study_Participant__c), ', ');
+        }
+        spFG.RecruitedDate = fgm.Study_Participant__r.Date_Recruited__c;
+        spFG.DeclinedDate = fgm.Study_Participant__r.Date_of_Decline__c;
+        spFG.WithdrawalDate = fgm.Study_Participant__r.Withdrawal_Date__c;
+        spFG.ContactCountSP = taskSPCountMap.get(fgm.Study_Participant__c);
+        spFG.ContactCountFG = FGTaskCount;
+        return spFG;
+    }
+
     public static void main(){
         String s = 'Test string';
         String ss = 'Test strings';
@@ -9,13 +31,18 @@ public class Test{
         for(integer i=0;i<20;i++){
             //here we are doing few things
         }
+        for(integer j=0;j<20;j++){
+            System.debug('j:'+j);
+            if(j==2){
+                System.debug('j is 2:'+j);
+            }
+        }
         if(some cond){
-            //do few things
         }else{
             //do few things 
         }
         if(some cond){
-            
+            System.debug('inside this if cond:');
         }
     }
 }
