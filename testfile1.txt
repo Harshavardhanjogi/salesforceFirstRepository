@@ -41,6 +41,9 @@ public class Test{
         }else{
             //do few things 
         }
+        if(new if cond){
+            System.debug('sss:'+sss);
+        }
         if(some cond){
             System.debug('inside this if cond:');
         }
