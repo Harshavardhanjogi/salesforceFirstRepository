@@ -1,8 +1,21 @@
-
-E
-F
-G
-hi
-New line 6 git status
-line 78
-line 8 added by others
+public class Test{
+    public static void main(){
+        String s = 'Test string';
+        String ss = 'Test strings';
+        String sss = 'Test stringss';
+        System.debug('s:'+s);
+        System.debug('ss:'+ss);
+        System.debug('sss:'+sss);
+        for(integer i=0;i<20;i++){
+            //here we are doing few things
+        }
+        if(some cond){
+            //do few things
+        }else{
+            //do few things 
+        }
+        if(some cond){
+            
+        }
+    }
+}
